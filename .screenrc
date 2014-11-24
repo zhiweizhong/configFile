@@ -1,0 +1,46 @@
+#兼容shell使得.bashrc .profile /etc/profile等里面的别名等设置生效
+shell -$SHELL
+
+#启动时不显示欢迎信息
+startup_message off
+term xterm
+defscrollback 4096
+
+#设置编码
+defutf8 on
+defencoding utf-8
+encoding utf-8 utf-8
+
+# 避免出现vim退出后不清屏的现象
+altscreen on 
+
+#设置状态栏
+hardstatus alwayslastline
+shelltitle "$|window"
+hardstatus string '%{= kG}[ %{G}%c:%s %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][ %{C}(F5)New (F6)Detach (F11)Previous (F12)Next %{g}][%{kB} %d/%m %{w}%c %{g}]'
+
+##shutdown the noise
+vbell off
+
+## w to show the window list
+bind w windowlist -b
+bind ^w windowlist -b
+##initial apps to run
+screen
+screen
+screen
+screen
+select 0
+
+#绑定按键F7新建窗口
+bindkey -k k5 screen
+#绑定按键F8退出screen
+bindkey -k k6 detach
+#bind F11 to "move to previous window"
+bindkey -k F1 prev
+#bind F12 to "move to next window"
+bindkey -k F2 next
+attrcolor u "-u B"
+sessionname zhongzhiwei
+#在vi或者less退出时恢复到原屏幕的内容
+autodetach on

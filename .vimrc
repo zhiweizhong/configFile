@@ -45,8 +45,8 @@
 
 
 " Vim UI {
-    " set cursorcolumn " highlight the current column
-    "set cursorline " highlight current line
+    set cursorcolumn " highlight the current column
+    set cursorline " highlight current line
     set laststatus=2 " always show the status line
     set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
 "    set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
